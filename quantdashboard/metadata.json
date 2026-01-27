@@ -1,0 +1,5 @@
+{
+  "name": "QuantDashboard",
+  "description": "A high-performance, read-only algorithmic trading dashboard featuring real-time wallet tracking, risk metrics, and trade feeds.",
+  "requestFramePermissions": []
+}
