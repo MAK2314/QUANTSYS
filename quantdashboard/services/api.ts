@@ -1,10 +1,13 @@
 import { SystemStatus, TradeType, TradeStatus, Trade } from '../types';
 
-const API_BASE_URL = (import.meta as any).env.VITE_API_BASE_URL;
+const RAW_API_URL = import.meta.env.VITE_API_BASE_URL;
 
-if (!API_BASE_URL) {
+if (!RAW_API_URL) {
   throw new Error("VITE_API_BASE_URL is not defined");
 }
+
+const API_BASE_URL = RAW_API_URL.replace(/\/+$/, "");
+
 const generateMockData = (): SystemStatus => {
   const now = new Date();
   
